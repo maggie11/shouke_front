@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react'
+import TopNav from '../../components/TopNav'
+import Header from '../../components/Header'
 
 class AsyncPage extends PureComponent {
 	render() {
-		return <div className="">这是异步加载的页面</div>
+		return <TopNav />
 	}
 }
 

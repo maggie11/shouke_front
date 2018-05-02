@@ -1,7 +1,7 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
 import DynamicImport from '@modules/DynamicImport'
-import { HashRouter, Route, Link } from 'react-router-dom'
+import { HashRouter, Route, Link, Redirect } from 'react-router-dom'
 import { Button } from 'antd'
 import DB from '@DB'
 import '../base.css'
@@ -24,11 +24,12 @@ class Home extends React.Component {
 		return (
 			<HashRouter>
 				<div>
-					<div className="">这是主页，跟路由在此页面配置</div>
-					<Button>
-						<Link to="/async">下一页</Link>
-					</Button>
-					<Route path="/async" component={AsyncPage} />
+					<Route 
+						path="/"
+						exact
+						render={() => <Redirect to={`/zhuye`} />} 
+					/>
+					<Route path="/zhuye" component={AsyncPage} />
 				</div>
 			</HashRouter>
 		)
