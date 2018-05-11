@@ -12,7 +12,7 @@ class LeftMenu extends Component {
 
     render() {
         return (
-            <
+            <div></div>
         )
     }
 }
